@@ -1,0 +1,81 @@
+Warning: No models match pattern "anthropic/claude-opus-4-6"
+Warning: No models match pattern "anthropic/claude-sonnet-4-6"
+[38;5;241mModel scope: gpt-5.4, qwen3.8:27b-mlx[38;5;244m (Ctrl+P to cycle)[39m[39m
+[?2004h[>7u[?u[c[?25l[?2026h[0m]8;;
+ [38;5;109mpi[39m[38;5;241m v0.85.1[39m                                                                     [0m]8;;
+ [38;5;241mescape[39m[38;5;244m interrupt[39m[38;5;244m · [39m[38;5;241mctrl+c/ctrl+d[39m[38;5;244m clear/exit[39m[38;5;244m · [39m[38;5;241m/[39m[38;5;244m commands[39m[38;5;244m · [39m[38;5;241m![39m[38;5;244m bash[39m[38;5;244m · [39m[38;5;241mctrl+o[39m[38;5;244m     [0m]8;;
+ [38;5;244mmore[39m                                                                           [0m]8;;
+ [38;5;241mPress ctrl+o to show full startup help and loaded resources.[39m                   [0m]8;;
+                                                                                [0m]8;;
+ [38;5;241mPi can explain its own features and look up its docs. Ask it how to use or     [0m]8;;
+ [38;5;241mextend Pi.[39m                                                                     [0m]8;;
+[0m]8;;
+[0m]8;;
+[38;5;139m────────────────────────────────────────────────────────────────────────────────[39m[0m]8;;
+[7m [0m                                                                               [0m]8;;
+[38;5;139m────────────────────────────────────────────────────────────────────────────────[39m[0m]8;;
+[38;5;241m~/.no-mistakes/worktrees/112ad61efd5a/01M2J3JP94H00DHX4BQ153YQB9 (detached)[39m[0m]8;;
+[38;5;241m0.1%/66k (auto)[39m[38;5;241m                                           qwen3.8:27b-mlx • high[39m[0m]8;;[?2026l[3A[1G[?25l]0;π - 01M2J3JP94H00DHX4BQ153YQB9[?2026h[2A[2K[38;5;222m[Skills][39m                                                                        [0m]8;;
+[2K[38;5;241m  afk, ahoy, apple-app-bootstrap, apple-app-icon, apple-platform-think,         [0m]8;;
+[2K[38;5;241marchive-link-finder, ask-user-authority, azure-devops-gitops-operator,          [0m]8;;
+[2K[38;5;241mazure-ril-documentum-aks-devops, bearings, beautiful-mermaid, better-colors,    [0m]8;;
+[2K[38;5;241mbetter-typography, better-ui, bootstrap-diagnostics, captain-design-talk,       [0m]8;;
+[2K[38;5;241mcaptain-hold-lifecycle, captivating-tech-shorts, chrome-cdp, claude,            [0m]8;;
+[2K[38;5;241mclaude-agent-sdk-dev, claude-agent-sdk-upgrade-guard,                           [0m]8;;
+[2K[38;5;241mclaude-automation-recommender, codex-goal-prompt, context7, converge,           [0m]8;;
+[2K[38;5;241mcustomer-email-author, decision-hold-lifecycle, design-concepts,                [0m]8;;
+[2K[38;5;241mdesign-judgment, design-taste-frontend, diagnostic-reasoning,                   [0m]8;;
+[2K[38;5;241mdocumentum-25-4-sources, drawio, engineering-principles, excalidraw,            [0m]8;;
+[2K[38;5;241mextract-x-article, find-skills, finding-judgment, firstmate-codexapp,           [0m]8;;
+[2K[38;5;241mfirstmate-coding-guidelines, firstmate-orca, fmx-respond,                       [0m]8;;
+[2K[38;5;241mgemini-translation-review, gh-address-comments, gptpro, grill-me, grilling,     [0m]8;;
+[2K[38;5;241mharness-adapters, hatch-pet, herdr, html, html-diagram, html-plan,              [0m]8;;
+[2K[38;5;241mhub-catalog-entry-author, intelli-expense-import, kun, last30days, no-mistakes, [0m]8;;
+[2K[38;5;241mopentext-docx, opentext-html-brief-to-pptx, opentext-ppt-template,              [0m]8;;
+[2K[38;5;241mopentext-pptx-agents-template, oracle-render-pack, otds-cli-gap-implementer,    [0m]8;;
+[2K[38;5;241moverlay-studio-ril-dev-sync, parallel-search-extract, peekaboo, playwright,     [0m]8;;
+[2K[38;5;241mplaywright-interactive, process-event-sources, prod-user-migration,             [0m]8;;
+[2K[38;5;241mproject-management, promo-video-review-board, quiet, quota-array-dispatch,      [0m]8;;
+[2K[38;5;241mrecall, record-matched-ui-scenarios, reliance-codex-agent-pc-gitops-operator,   [0m]8;;
+[2K[38;5;241mreliance-project-tour, repo, repobench-ril-windows-release,                     [0m]8;;
+[2K[38;5;241mril-deploy-config-operator, ril-dev-customer-env-operator,                      [0m]8;;
+[2K[38;5;241mril-helper-script-author, ril-inventory-enricher, ril-issue-documenter,         [0m]8;;
+[2K[38;5;241mscreenshot, secondmate-provisioning, show-me, sitrep, stepback-coach, stow,     [0m]8;;
+[2K[38;5;241mstuck-crewmate-recovery, swiftui-design-principles, swiftui-pro, tldraw-offline,[0m]8;;
+[2K[38;5;241munslop, updatefirstmate, web-search-plus[39m                                        [0m]8;;
+[2K[0m]8;;
+[2K[38;5;222m[Prompts][39m                                                                       [0m]8;;
+[2K[38;5;241m  /double-check, /double-check-plan[39m                                             [0m]8;;
+[2K[0m]8;;
+[2K[38;5;222m[Extensions][39m                                                                    [0m]8;;
+[2K[38;5;241m  calm-render-evidence.ts, chrome-devtools-mcp, fm-branch-supervision.ts,       [0m]8;;
+[2K[38;5;241mfm-calm.ts, fm-primary-pi-watch.ts, fm-primary-turnend-guard.ts,                [0m]8;;
+[2K[38;5;241mherdr-agent-state.ts, pi-librarian@1.3.7, pi-review-loop[39m                        [0m]8;;
+[2K[0m]8;;
+[2K[38;5;226m[Skill conflicts][39m                                                               [0m]8;;
+[2K[38;5;226m  ~/.codex/skills/ril-pipelines-repo-operator/SKILL.md[39m                          [0m]8;;
+[2K[38;5;226m    Nested mappings are not allowed in compact mappings at line 2, column 14:   [0m]8;;
+[2K[38;5;226m                                                                                [0m]8;;
+[2K[38;5;226mdescription: Standardize every change to the dctm254-pipelines repo that must r…[0m]8;;
+[2K[38;5;226m             ^                                                                  [0m]8;;
+[2K[38;5;226m[39m                                                                                [0m]8;;
+[2K[0m]8;;
+[2K[0m]8;;
+[2K [38;5;241mChrome DevTools MCP: 29 tools ready[39m                                            [0m]8;;
+[2K[0m]8;;
+[2K[0m]8;;
+[2K [38;5;188m⛵[39m[38;5;241m Supervision branch paused after repeated provider errors; main will handle  [0m]8;;
+[2K [38;5;241mwakes while it cools down.[39m                                                     [0m]8;;
+[2K[0m]8;;
+[2K [38;5;241m⚓ legacy-task: captain review required[39m                                        [0m]8;;
+[2K[0m]8;;
+[2K [38;5;188m⛵[39m[38;5;241m Supervision branch recovered after a successful cooldown probe.[39m             [0m]8;;
+[2K[0m]8;;
+[2K [38;5;188m⚓[39m[38;5;241m [seq 42] current-task: PR checks green, ready for captain review[39m            [0m]8;;
+[2K[0m]8;;
+[2K[38;5;139m────────────────────────────────────────────────────────────────────────────────[39m[0m]8;;
+[2K[7m [0m                                                                               [0m]8;;
+[2K[38;5;139m────────────────────────────────────────────────────────────────────────────────[39m[0m]8;;
+[2K[38;5;241m~/.no-mistakes/worktrees/112ad61efd5a/01M2J3JP94H00DHX4BQ153YQB9 (detached)[39m[0m]8;;
+[2K[38;5;241m0.1%/66k (auto)[39m[38;5;241m                                  (ollama) qwen3.8:27b-mlx • high[39m[0m]8;;[?2026l[3A[1G[?25l[1G[?25l[<u[1G[?25l [4B
+[?25h[?2004l]0;π - 01M2J3JP94H00DHX4BQ153YQB9
