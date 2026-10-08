@@ -1,0 +1,19 @@
+.q: watcher stop exit 0
+watcher: none running
+
+.q: private tmux server absent
+no server running on /Users/nags/.no-mistakes/worktrees/112ad61efd5a/01M4EM2VPS4MZPQXPM3054V0WT/.q/tmux/tmux-501/fm-lab
+
+.r: watcher stop exit 0
+watcher: none running
+
+.r: private tmux server absent
+no server running on /Users/nags/.no-mistakes/worktrees/112ad61efd5a/01M4EM2VPS4MZPQXPM3054V0WT/.r/tmux/tmux-501/fm-lab
+
+.u: watcher stop exit 0
+watcher: none running
+
+.u: private tmux server absent
+no server running on /Users/nags/.no-mistakes/worktrees/112ad61efd5a/01M4EM2VPS4MZPQXPM3054V0WT/.u/tmux/tmux-501/fm-lab
+
+Removed only the four marked lab homes, temporary driver and empty targeted-test temp directory.

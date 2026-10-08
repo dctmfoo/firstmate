@@ -1,0 +1,35 @@
+Real authenticated Claude primary and supervision host/engine; marked disposable home, private 120x40 tmux server. Worker metadata, brief and status are disposable fixture records.
+
+--- same-session-host.out ---
+watcher: started pid=61877 (beacon fresh)
+supervision-host: cycle boundary - the host ended its park at its bound; drain, acknowledge, and end the turn, and the next park starts on its own
+
+
+--- same-session-main-drain.out ---
+WAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 0 --recovery-generation 87398.1791494603.rd7ixK
+
+
+--- same-session-main-ack.out ---
+
+
+--- same-session-outcomes.jsonl ---
+{"seq":1,"epoch":1791494436,"task":"handoff","wake":"signal: /Users/nags/.no-mistakes/worktrees/112ad61efd5a/01M4EM2VPS4MZPQXPM3054V0WT/.q/state/handoff.status","verdict":"captain","summary":"The handoff worker finished implementing and committed; no PR exists yet. It is waiting for MAIN's go to start /no-mistakes validation.","silent":false,"statusEndpoint":120,"statusIdent":"strong:16777233:4260147656:1791494388.658382679"}
+{"seq":2,"epoch":1791494510,"task":"handoff","wake":"signal: /Users/nags/.no-mistakes/worktrees/112ad61efd5a/01M4EM2VPS4MZPQXPM3054V0WT/.q/state/handoff.status","verdict":"routine","summary":"The handoff worker repeated its ready line: still waiting for MAIN's go to start validation, no PR yet. Nothing has changed since the earlier report.","silent":true,"statusEndpoint":240,"statusIdent":"strong:16777233:4260147656:1791494388.658382679"}
+
+
+--- same-session-engine.txt ---
+engine=claude
+model=sonnet
+session=0d143146-81f2-4d43-bb5a-da2fecbe8790
+key=6837:2323373955:3292652010
+turns=2
+conversation_cost=0.045766
+
+
+--- same-session-host.log ---
+1791494380	start	gen=host-12509-1791494380	primary=claude
+1791494440	handled	turn=host-12509-1791494380.1	posture=attended	rc=0	reports=1	error=0 cost=0.022806 conversation_cost=0.022806 input=10 cache_read=66560 cache_write=1076 output=517 turns=5	signal: /Users/nags/.no-mistakes/worktrees/112ad61efd5a/01M4EM2VPS4MZPQXPM3054V0WT/.q/state/handoff.status
+1791494440	to-main	branch-outcome: the supervision session handled this wake and recorded captain outcomes for you (store rows 1); run bin/fm-wake-drain.sh, act on its BRANCH OUTCOMES section, and acknowledge them as it prints
+1791494453	start	gen=host-61304-1791494452	primary=claude
+1791494516	handled	turn=host-61304-1791494452.1	posture=attended	rc=0	reports=1	error=0 cost=0.02296 conversation_cost=0.045766 input=8 cache_read=58222 cache_write=1390 output=574 turns=4	signal: /Users/nags/.no-mistakes/worktrees/112ad61efd5a/01M4EM2VPS4MZPQXPM3054V0WT/.q/state/handoff.status
+1791494603	boundary	after 151s

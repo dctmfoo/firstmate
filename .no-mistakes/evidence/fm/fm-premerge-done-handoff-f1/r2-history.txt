@@ -1,0 +1,17 @@
+Public CLI task history after 26 delivered outcomes and acknowledgement of the captain outcome:
+{"seq":1,"epoch":1791494135,"task":"handoff","wake":"","verdict":"captain","summary":"Waiting for MAIN validation go","silent":false,"statusEndpoint":0,"statusIdent":"-"}
+{"seq":2,"epoch":1791494135,"task":"handoff","wake":"","verdict":"routine","summary":"Waiting for MAIN validation go","silent":false,"statusEndpoint":0,"statusIdent":"-"}
+
+Unknown task returns empty history with exit 0.
+Store and both delivery/acknowledgement cursors remain byte-identical after these reads.
+('list', '--task'): exit 2
+usage: fm-branch-outcome.sh append --task <id> --verdict routine|captain --summary <text> [--wake <text>] [--silent true|false] | unread | mark-read --through <seq> | unprocessed | mark-processed --through <seq> | present | processed-init [--held-lock] | list [--recent <n> | --task <id>] | lookup --seqs <n,...> | startup-replay | seed-tail
+
+('list', '--task', 'handoff', '--recent', '1'): exit 2
+usage: fm-branch-outcome.sh append --task <id> --verdict routine|captain --summary <text> [--wake <text>] [--silent true|false] | unread | mark-read --through <seq> | unprocessed | mark-processed --through <seq> | present | processed-init [--held-lock] | list [--recent <n> | --task <id>] | lookup --seqs <n,...> | startup-replay | seed-tail
+
+('list', '--recent', '1', '--task', 'handoff'): exit 2
+usage: fm-branch-outcome.sh append --task <id> --verdict routine|captain --summary <text> [--wake <text>] [--silent true|false] | unread | mark-read --through <seq> | unprocessed | mark-processed --through <seq> | present | processed-init [--held-lock] | list [--recent <n> | --task <id>] | lookup --seqs <n,...> | startup-replay | seed-tail
+
+Malformed store rejects history without partial output: exit 1
+error: refusing read because the outcome store is malformed or non-sequential

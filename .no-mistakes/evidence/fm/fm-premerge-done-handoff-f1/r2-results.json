@@ -1,0 +1,10 @@
+{
+  "first_done": "pass",
+  "prior_routine": "pass",
+  "same_session_repeat": "pass",
+  "restart_repeat": "pass",
+  "task_history": "pass",
+  "history_guards": "pass",
+  "native_stop_hook": "untested",
+  "native_reason": "Interactive Claude workspace trust requires user-level configuration outside the authorized boundary."
+}

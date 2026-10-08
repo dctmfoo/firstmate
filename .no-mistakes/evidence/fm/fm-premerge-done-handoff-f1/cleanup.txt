@@ -1,0 +1,20 @@
+.l: fm-watch-arm.sh --stop rc=0
+watcher: none running
+.l: private socket list-sessions rc=1
+no server running on /Users/nags/.no-mistakes/worktrees/112ad61efd5a/01M4EM2VPS4MZPQXPM3054V0WT/.l/tmux/tmux-501/fm-lab
+.m: fm-watch-arm.sh --stop rc=0
+watcher: none running
+.m: private socket list-sessions rc=1
+no server running on /Users/nags/.no-mistakes/worktrees/112ad61efd5a/01M4EM2VPS4MZPQXPM3054V0WT/.m/tmux/tmux-501/fm-lab
+.n: fm-watch-arm.sh --stop rc=0
+watcher: none running
+.n: private socket list-sessions rc=1
+no server running on /Users/nags/.no-mistakes/worktrees/112ad61efd5a/01M4EM2VPS4MZPQXPM3054V0WT/.n/tmux/tmux-501/fm-lab
+.o: fm-watch-arm.sh --stop rc=0
+watcher: none running
+.o: private socket list-sessions rc=1
+no server running on /Users/nags/.no-mistakes/worktrees/112ad61efd5a/01M4EM2VPS4MZPQXPM3054V0WT/.o/tmux/tmux-501/fm-lab
+.p: fm-watch-arm.sh --stop rc=0
+watcher: none running
+.p: private socket list-sessions rc=1
+no server running on /Users/nags/.no-mistakes/worktrees/112ad61efd5a/01M4EM2VPS4MZPQXPM3054V0WT/.p/tmux/tmux-501/fm-lab

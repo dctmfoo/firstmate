@@ -1,0 +1,46 @@
+A real Claude primary was restarted against the same marked lab home. The first captain outcome had been displayed to MAIN and acknowledged. The worker appended the same implementation-complete/waiting-for-go declaration; no PR, validation run, or other task change occurred.
+
+--- state/handoff.status ---
+done [at=1791492761]: Implementation complete, committed; waiting for Firstmate to instruct /no-mistakes. No PR exists.
+done [at=1791492778]: Implementation complete, committed; waiting for Firstmate to instruct /no-mistakes. No PR exists.
+done [at=1791492933]: Implementation complete, committed; waiting for Firstmate to instruct /no-mistakes. No PR exists.
+
+--- state/.branch-outcomes-processed ---
+1
+
+--- host.out ---
+watcher: started pid=68238 (beacon fresh)
+supervision-host: branch-outcome: the supervision session handled this wake and recorded captain outcomes for you (store rows 3); run bin/fm-wake-drain.sh, act on its BRANCH OUTCOMES section, and acknowledge them as it prints
+
+--- main-drain.out ---
+BRANCH OUTCOMES (captain outcomes the supervision session recorded for you, one line per task, oldest first; each says what was true when it was recorded, so check the task's current state first, including its still-open decisions listed above under OPEN DECISIONS, and sort them into still open and already settled, such as a decision since answered, a PR since merged, or a task since finished - process the still-open ones as firstmate: tell the captain, land or merge what is ready, answer or escalate a decision, or act on a blocker; your reply to the captain covers only those, as if the settled ones had never been listed, and a settled one needs only the acknowledgement):
+[seq 3, recorded 0m ago] handoff: The handoff worker finished the implementation and committed it. No PR exists yet. It is waiting for MAIN's go to start validation.
+BRANCH OUTCOMES: after processing them run bin/fm-branch-outcome.sh mark-processed --through 3; until then every drain presents them again
+WAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 0 --recovery-generation 79160.1791492949.kOowmb
+
+--- state/branch-outcomes.jsonl ---
+{"seq":1,"epoch":1791492772,"task":"handoff","wake":"signal: /Users/nags/.no-mistakes/worktrees/112ad61efd5a/01M4EM2VPS4MZPQXPM3054V0WT/.p/state/handoff.status","verdict":"captain","summary":"Implementation is complete and committed; the worker is waiting for MAIN's go to start validation. No PR exists yet.","silent":false,"statusEndpoint":120,"statusIdent":"strong:16777233:4259585525:1791492761.462808708"}
+{"seq":2,"epoch":1791492790,"task":"handoff","wake":"signal: /Users/nags/.no-mistakes/worktrees/112ad61efd5a/01M4EM2VPS4MZPQXPM3054V0WT/.p/state/handoff.status","verdict":"routine","summary":"Worker repeated its implementation-complete line; still waiting for MAIN's validation go, nothing changed since the last report.","silent":true,"statusEndpoint":240,"statusIdent":"strong:16777233:4259585525:1791492761.462808708"}
+{"seq":3,"epoch":1791492945,"task":"handoff","wake":"signal: /Users/nags/.no-mistakes/worktrees/112ad61efd5a/01M4EM2VPS4MZPQXPM3054V0WT/.p/state/handoff.status","verdict":"captain","summary":"The handoff worker finished the implementation and committed it. No PR exists yet. It is waiting for MAIN's go to start validation.","silent":false,"statusEndpoint":360,"statusIdent":"strong:16777233:4259585525:1791492761.462808708"}
+
+--- state/.supervision-host.log ---
+1791492740	start	gen=host-65356-1791492740	primary=claude
+1791492776	handled	turn=host-65356-1791492740.1	posture=attended	rc=0	reports=1	error=0 cost=0.024494 conversation_cost=0.024494 input=8 cache_read=51031 cache_write=2473 output=438 turns=4	signal: /Users/nags/.no-mistakes/worktrees/112ad61efd5a/01M4EM2VPS4MZPQXPM3054V0WT/.p/state/handoff.status
+1791492776	to-main	branch-outcome: the supervision session handled this wake and recorded captain outcomes for you (store rows 1); run bin/fm-wake-drain.sh, act on its BRANCH OUTCOMES section, and acknowledge them as it prints
+1791492778	start	gen=host-95192-1791492778	primary=claude
+1791492794	handled	turn=host-95192-1791492778.1	posture=attended	rc=0	reports=1	error=0 cost=0.02142 conversation_cost=0.045914 input=8 cache_read=57060 cache_write=1163 output=534 turns=4	signal: /Users/nags/.no-mistakes/worktrees/112ad61efd5a/01M4EM2VPS4MZPQXPM3054V0WT/.p/state/handoff.status
+1791492869	boundary	after 91s
+1791492916	start	gen=host-67939-1791492915	primary=claude
+1791492949	handled	turn=host-67939-1791492915.1	posture=attended	rc=0	reports=1	error=0 cost=0.01879 conversation_cost=0.01879 input=8 cache_read=52581 cache_write=927 output=455 turns=4	signal: /Users/nags/.no-mistakes/worktrees/112ad61efd5a/01M4EM2VPS4MZPQXPM3054V0WT/.p/state/handoff.status
+1791492949	to-main	branch-outcome: the supervision session handled this wake and recorded captain outcomes for you (store rows 3); run bin/fm-wake-drain.sh, act on its BRANCH OUTCOMES section, and acknowledge them as it prints
+
+--- state/.supervision-host-engine ---
+engine=claude
+model=sonnet
+session=fa79679c-41fe-4e0f-af4b-c5f63fff1b7c
+key=64777:3900694288:717677474
+turns=1
+conversation_cost=0.01879
+
+--- restart-primary-result.json ---
+{"duration_api_ms":6504,"stop_reason":"end_turn","session_id":"cc36f83e-16d0-40d8-82df-44b342fd1c15","total_cost_usd":0.0299514,"usage":{"input_tokens":4,"cache_creation_input_tokens":2025,"cache_read_input_tokens":5877,"output_tokens":628,"output_tokens_details":{"thinking_tokens":37},"server_tool_use":{"web_search_requests":0,"web_fetch_requests":0},"service_tier":"standard","cache_creation":{"ephemeral_1h_input_tokens":2025,"ephemeral_5m_input_tokens":0},"inference_geo":"not_available","iterations":[{"input_tokens":2,"output_tokens":517,"cache_read_input_tokens":3615,"cache_creation_input_tokens":672,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":672},"type":"message"}],"speed":"standard","fallback_credit":null},"modelUsage":{"claude-opus-5-5":{"inputTokens":4,"outputTokens":628,"cacheReadInputTokens":5877,"cacheCreationInputTokens":2025,"webSearchRequests":0,"costUSD":0.0299514,"contextWindow":1000000,"maxOutputTokens":128000,"thinkingTokens":37,"canonicalModel":"claude-opus-5-5","provider":"firstParty","costBasis":"list"}},"permission_denials":[],"terminal_reason":"completed","fast_mode_state":"off","fast_mode_disabled_reason":"sdk_opt_in_required","subagent_stats":{"spawned":0,"requested":{"background":0,"foreground":0,"unset":0},"started_in_background":0,"max_depth":0,"spawned_by_subagents":0,"completed":0,"failed":0,"killed":{"parent":0,"user":0,"system":0},"refused":{"depth_limit":0,"concurrency_limit":0,"budget":0},"by_type":{}},"safety_stops":0,"is_error":false,"num_turns":2,"subtype":"success","api_error_status":null,"result":"The driver finished and started the watcher (pid 68238, beacon fresh). Full output:\n\n```\nwatcher: started pid=68238 (beacon fresh)\nsupervision-host: branch-outcome: the supervision session handled this wake and recorded captain outcomes for you (store rows 3); run bin/fm-wake-drain.sh, act on its BRANCH OUTCOMES section, and acknowledge them as it prints\nBRANCH OUTCOMES (captain outcomes the supervision session recorded for you, one line per task, oldest first; ...):\n[seq 3, recorded 0m ago] handoff: The handoff worker finished the implementation and committed it. No PR exists yet. It is waiting for MAIN's go to start validation.\nBRANCH OUTCOMES: after processing them run bin/fm-branch-outcome.sh mark-processed --through 3; until then every drain presents them again\nWAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 0 --recovery-generation 79160.1791492949.kOowmb\n```\n\nThe output asks for more steps: run `bin/fm-wake-drain.sh`, mark outcomes processed through seq 3, and acknowledge the wake. It also says the handoff worker is waiting for a go-ahead to start validation. My task was only to run this one command, so I didn't do any of those. If you want them done, tell me and I'll run them.","ttft_ms":1931,"type":"result","duration_ms":42936,"uuid":"a396df01-92b2-4f7d-a81d-e2392aa9a648","ttft_stream_ms":773,"time_to_request_ms":34,"first_content_frame_ms":773,"queued_turn_count":0,"result_index":0}

@@ -1,0 +1,33 @@
+Real Claude primary and supervision engine, isolated marked FM_HOME and private 120x40 tmux session. Ship metadata, brief, and status are disposable fixture records. Interactive Stop-hook rewake was not exercised.
+
+--- host.out ---
+watcher: started pid=92472 (beacon fresh)
+supervision-host: branch-outcome: the supervision session handled this wake and recorded captain outcomes for you (store rows 2); run bin/fm-wake-drain.sh, act on its BRANCH OUTCOMES section, and acknowledge them as it prints
+
+--- main-drain.out ---
+STATUS OUTCOME BACKSTOP (newest captain-facing task event has no covering branch outcome):
+handoff done [at=1791492630]: Implementation complete, committed; waiting for Firstmate to instruct /no-mistakes. No PR exists.
+BRANCH OUTCOMES (captain outcomes the supervision session recorded for you, one line per task, oldest first; each says what was true when it was recorded, so check the task's current state first, including its still-open decisions listed above under OPEN DECISIONS, and sort them into still open and already settled, such as a decision since answered, a PR since merged, or a task since finished - process the still-open ones as firstmate: tell the captain, land or merge what is ready, answer or escalate a decision, or act on a blocker; your reply to the captain covers only those, as if the settled ones had never been listed, and a settled one needs only the acknowledgement):
+[seq 2, newest of 2 for this task, recorded 0m ago] handoff: The handoff worker finished and committed the implementation. No PR exists yet. It is waiting for MAIN's go to start /no-mistakes validation.
+BRANCH OUTCOMES: after processing them run bin/fm-branch-outcome.sh mark-processed --through 2; until then every drain presents them again
+WAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 0 --recovery-generation 97490.1791492632.cpLPXx
+
+--- state/branch-outcomes.jsonl ---
+{"seq":1,"epoch":1791492612,"task":"handoff","wake":"signal: handoff.status","verdict":"captain","summary":"The worker completed the requested fix and is waiting for MAIN to send the validation go. No PR exists.","silent":false,"statusEndpoint":120,"statusIdent":"strong:16777233:4259579757:1791492612.254479706"}
+{"seq":2,"epoch":1791492628,"task":"handoff","wake":"signal: /Users/nags/.no-mistakes/worktrees/112ad61efd5a/01M4EM2VPS4MZPQXPM3054V0WT/.o/state/handoff.status","verdict":"captain","summary":"The handoff worker finished and committed the implementation. No PR exists yet. It is waiting for MAIN's go to start /no-mistakes validation.","silent":false,"statusEndpoint":120,"statusIdent":"strong:16777233:4259579757:1791492612.254479706"}
+
+--- state/.supervision-host.log ---
+1791492616	start	gen=host-91867-1791492615	primary=claude
+1791492632	handled	turn=host-91867-1791492615.1	posture=attended	rc=0	reports=1	error=0 cost=0.059605 conversation_cost=0.059605 input=8 cache_read=41823 cache_write=11701 output=442 turns=4	signal: /Users/nags/.no-mistakes/worktrees/112ad61efd5a/01M4EM2VPS4MZPQXPM3054V0WT/.o/state/handoff.status
+1791492632	to-main	branch-outcome: the supervision session handled this wake and recorded captain outcomes for you (store rows 2); run bin/fm-wake-drain.sh, act on its BRANCH OUTCOMES section, and acknowledge them as it prints
+
+--- state/.supervision-host-engine ---
+engine=claude
+model=sonnet
+session=837b8653-fbbf-4e2e-aefc-056877ce873a
+key=89512:3747001088:1390156871
+turns=1
+conversation_cost=0.059605
+
+--- primary-result.json ---
+{"duration_api_ms":4011,"stop_reason":"end_turn","session_id":"2cf14964-5d83-4c2a-8680-de773084e0bd","total_cost_usd":0.0168348,"usage":{"input_tokens":4,"cache_creation_input_tokens":1533,"cache_read_input_tokens":5874,"output_tokens":169,"output_tokens_details":{"thinking_tokens":0},"server_tool_use":{"web_search_requests":0,"web_fetch_requests":0},"service_tier":"standard","cache_creation":{"ephemeral_1h_input_tokens":1533,"ephemeral_5m_input_tokens":0},"inference_geo":"not_available","iterations":[{"input_tokens":2,"output_tokens":63,"cache_read_input_tokens":3612,"cache_creation_input_tokens":183,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":183},"type":"message"}],"speed":"standard","fallback_credit":null},"modelUsage":{"claude-opus-5-5":{"inputTokens":4,"outputTokens":169,"cacheReadInputTokens":5874,"cacheCreationInputTokens":1533,"webSearchRequests":0,"costUSD":0.0168348,"contextWindow":1000000,"maxOutputTokens":128000,"thinkingTokens":0,"canonicalModel":"claude-opus-5-5","provider":"firstParty","costBasis":"list"}},"permission_denials":[],"terminal_reason":"completed","fast_mode_state":"off","fast_mode_disabled_reason":"sdk_opt_in_required","subagent_stats":{"spawned":0,"requested":{"background":0,"foreground":0,"unset":0},"started_in_background":0,"max_depth":0,"spawned_by_subagents":0,"completed":0,"failed":0,"killed":{"parent":0,"user":0,"system":0},"refused":{"depth_limit":0,"concurrency_limit":0,"budget":0},"by_type":{}},"safety_stops":0,"is_error":false,"num_turns":2,"subtype":"success","api_error_status":null,"result":"I ran `bash .o/driver.sh` and it finished without printing anything to stdout or stderr. The tool didn't report the exit code, so I can't confirm whether it exited with 0.","ttft_ms":2000,"type":"result","duration_ms":22985,"uuid":"6932edcd-f8c8-4ff6-b73a-e0260a063fce","ttft_stream_ms":1263,"time_to_request_ms":27,"first_content_frame_ms":1265,"queued_turn_count":0,"result_index":0}

@@ -1,0 +1,36 @@
+Real authenticated Claude primary and supervision host/engine; marked disposable home, private 120x40 tmux server. Worker metadata, brief and status are disposable fixture records.
+
+--- first-host.out ---
+watcher: started pid=14433 (beacon fresh)
+supervision-host: branch-outcome: the supervision session handled this wake and recorded captain outcomes for you (store rows 1); run bin/fm-wake-drain.sh, act on its BRANCH OUTCOMES section, and acknowledge them as it prints
+
+
+--- first-main-drain.out ---
+1791494426	3	stale	primary:worker.0	stale: primary:worker.0
+WAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 3 --recovery-generation 14433.1791494420.XLSTrZ
+BRANCH OUTCOMES (captain outcomes the supervision session recorded for you, one line per task, oldest first; each says what was true when it was recorded, so check the task's current state first, including its still-open decisions listed above under OPEN DECISIONS, and sort them into still open and already settled, such as a decision since answered, a PR since merged, or a task since finished - process the still-open ones as firstmate: tell the captain, land or merge what is ready, answer or escalate a decision, or act on a blocker; your reply to the captain covers only those, as if the settled ones had never been listed, and a settled one needs only the acknowledgement):
+[seq 1, recorded 0m ago] handoff: The handoff worker finished implementing and committed; no PR exists yet. It is waiting for MAIN's go to start /no-mistakes validation.
+BRANCH OUTCOMES: after processing them run bin/fm-branch-outcome.sh mark-processed --through 1; until then every drain presents them again
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+
+
+--- first-main-ack.out ---
+
+
+--- first-outcomes.jsonl ---
+{"seq":1,"epoch":1791494436,"task":"handoff","wake":"signal: /Users/nags/.no-mistakes/worktrees/112ad61efd5a/01M4EM2VPS4MZPQXPM3054V0WT/.q/state/handoff.status","verdict":"captain","summary":"The handoff worker finished implementing and committed; no PR exists yet. It is waiting for MAIN's go to start /no-mistakes validation.","silent":false,"statusEndpoint":120,"statusIdent":"strong:16777233:4260147656:1791494388.658382679"}
+
+
+--- first-engine.txt ---
+engine=claude
+model=sonnet
+session=0d143146-81f2-4d43-bb5a-da2fecbe8790
+key=6837:2323373955:3292652010
+turns=1
+conversation_cost=0.022806
+
+
+--- first-host.log ---
+1791494380	start	gen=host-12509-1791494380	primary=claude
+1791494440	handled	turn=host-12509-1791494380.1	posture=attended	rc=0	reports=1	error=0 cost=0.022806 conversation_cost=0.022806 input=10 cache_read=66560 cache_write=1076 output=517 turns=5	signal: /Users/nags/.no-mistakes/worktrees/112ad61efd5a/01M4EM2VPS4MZPQXPM3054V0WT/.q/state/handoff.status
+1791494440	to-main	branch-outcome: the supervision session handled this wake and recorded captain outcomes for you (store rows 1); run bin/fm-wake-drain.sh, act on its BRANCH OUTCOMES section, and acknowledge them as it prints

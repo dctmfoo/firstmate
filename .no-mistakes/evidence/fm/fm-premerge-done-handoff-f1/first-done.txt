@@ -1,0 +1,30 @@
+Real Claude primary and supervision engine, isolated marked FM_HOME and private 120x40 tmux session. Ship metadata, brief, and status are disposable fixture records. Interactive Stop-hook rewake was not exercised.
+
+--- host.out ---
+watcher: started pid=91582 (beacon fresh)
+supervision-host: branch-outcome: the supervision session handled this wake and recorded captain outcomes for you (store rows 1); run bin/fm-wake-drain.sh, act on its BRANCH OUTCOMES section, and acknowledge them as it prints
+
+--- main-drain.out ---
+BRANCH OUTCOMES (captain outcomes the supervision session recorded for you, one line per task, oldest first; each says what was true when it was recorded, so check the task's current state first, including its still-open decisions listed above under OPEN DECISIONS, and sort them into still open and already settled, such as a decision since answered, a PR since merged, or a task since finished - process the still-open ones as firstmate: tell the captain, land or merge what is ready, answer or escalate a decision, or act on a blocker; your reply to the captain covers only those, as if the settled ones had never been listed, and a settled one needs only the acknowledgement):
+[seq 1, recorded 0m ago] handoff: Worker finished and committed the implementation; no PR yet. It is waiting for MAIN's go to start validation.
+BRANCH OUTCOMES: after processing them run bin/fm-branch-outcome.sh mark-processed --through 1; until then every drain presents them again
+WAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 0 --recovery-generation 17458.1791492647.2HffKx
+
+--- state/branch-outcomes.jsonl ---
+{"seq":1,"epoch":1791492643,"task":"handoff","wake":"signal: /Users/nags/.no-mistakes/worktrees/112ad61efd5a/01M4EM2VPS4MZPQXPM3054V0WT/.m/state/handoff.status","verdict":"captain","summary":"Worker finished and committed the implementation; no PR yet. It is waiting for MAIN's go to start validation.","silent":false,"statusEndpoint":120,"statusIdent":"strong:16777233:4259580926:1791492630.625245623"}
+
+--- state/.supervision-host.log ---
+1791492615	start	gen=host-91003-1791492615	primary=claude
+1791492647	handled	turn=host-91003-1791492615.1	posture=attended	rc=0	reports=1	error=0 cost=0.024962 conversation_cost=0.024962 input=8 cache_read=51049 cache_write=2489 output=478 turns=4	signal: /Users/nags/.no-mistakes/worktrees/112ad61efd5a/01M4EM2VPS4MZPQXPM3054V0WT/.m/state/handoff.status
+1791492647	to-main	branch-outcome: the supervision session handled this wake and recorded captain outcomes for you (store rows 1); run bin/fm-wake-drain.sh, act on its BRANCH OUTCOMES section, and acknowledge them as it prints
+
+--- state/.supervision-host-engine ---
+engine=claude
+model=sonnet
+session=f1756c6e-7117-43a6-a7d6-31ce3ee4a206
+key=89161:737213492:4121365311
+turns=1
+conversation_cost=0.024962
+
+--- primary-result.json ---
+{"duration_api_ms":3215,"stop_reason":"end_turn","session_id":"b6f0beea-5b58-4cde-97a8-6638a97e393c","total_cost_usd":0.016354800000000003,"usage":{"input_tokens":4,"cache_creation_input_tokens":1533,"cache_read_input_tokens":5874,"output_tokens":145,"output_tokens_details":{"thinking_tokens":0},"server_tool_use":{"web_search_requests":0,"web_fetch_requests":0},"service_tier":"standard","cache_creation":{"ephemeral_1h_input_tokens":1533,"ephemeral_5m_input_tokens":0},"inference_geo":"not_available","iterations":[{"input_tokens":2,"output_tokens":39,"cache_read_input_tokens":3612,"cache_creation_input_tokens":183,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":183},"type":"message"}],"speed":"standard","fallback_credit":null},"modelUsage":{"claude-opus-5-5":{"inputTokens":4,"outputTokens":145,"cacheReadInputTokens":5874,"cacheCreationInputTokens":1533,"webSearchRequests":0,"costUSD":0.016354800000000003,"contextWindow":1000000,"maxOutputTokens":128000,"thinkingTokens":0,"canonicalModel":"claude-opus-5-5","provider":"firstParty","costBasis":"list"}},"permission_denials":[],"terminal_reason":"completed","fast_mode_state":"off","fast_mode_disabled_reason":"sdk_opt_in_required","subagent_stats":{"spawned":0,"requested":{"background":0,"foreground":0,"unset":0},"started_in_background":0,"max_depth":0,"spawned_by_subagents":0,"completed":0,"failed":0,"killed":{"parent":0,"user":0,"system":0},"refused":{"depth_limit":0,"concurrency_limit":0,"budget":0},"by_type":{}},"safety_stops":0,"is_error":false,"num_turns":2,"subtype":"success","api_error_status":null,"result":"I ran `bash .m/driver.sh` and it finished without printing anything, either to standard output or to the error stream.","ttft_ms":2038,"type":"result","duration_ms":37427,"uuid":"31ea44ef-76ac-4c1c-9f7d-7a94db10d242","ttft_stream_ms":877,"time_to_request_ms":30,"first_content_frame_ms":877,"queued_turn_count":0,"result_index":0}

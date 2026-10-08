@@ -1,0 +1,36 @@
+Real authenticated Claude primary and supervision host/engine; marked disposable home, private tmux server at 120x40. Worker metadata, brief and status are disposable fixture records. Native Stop-hook delivery is separate and was not exercised.
+
+--- prior-routine-host.out ---
+watcher: started pid=87218 (beacon fresh)
+supervision-host: branch-outcome: the supervision session handled this wake and recorded captain outcomes for you (store rows 2); run bin/fm-wake-drain.sh, act on its BRANCH OUTCOMES section, and acknowledge them as it prints
+
+
+--- prior-routine-main-drain.out ---
+1791494236	3	stale	primary:worker.0	stale: primary:worker.0
+WAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 3 --recovery-generation 87218.1791494225.ltFArB
+BRANCH OUTCOMES (captain outcomes the supervision session recorded for you, one line per task, oldest first; each says what was true when it was recorded, so check the task's current state first, including its still-open decisions listed above under OPEN DECISIONS, and sort them into still open and already settled, such as a decision since answered, a PR since merged, or a task since finished - process the still-open ones as firstmate: tell the captain, land or merge what is ready, answer or escalate a decision, or act on a blocker; your reply to the captain covers only those, as if the settled ones had never been listed, and a settled one needs only the acknowledgement):
+[seq 2, recorded 0m ago] handoff: The handoff worker finished implementing and committed; no PR exists yet. It is waiting for MAIN's go to start validation.
+BRANCH OUTCOMES: after processing them run bin/fm-branch-outcome.sh mark-processed --through 2; until then every drain presents them again
+BRANCH OUTCOMES, ROUTINE (handled by the supervision session since your last drain; for your awareness, nothing to acknowledge):
+[seq 1] handoff: Implementation is complete; it goes through the validation pipeline next, nothing to acknowledge.
+WARNING: queued wakes pending - drain them with bin/fm-wake-drain.sh before anything else.
+
+
+--- prior-routine-outcomes.jsonl ---
+{"seq":1,"epoch":1791494179,"task":"handoff","wake":"","verdict":"routine","summary":"Implementation is complete; it goes through the validation pipeline next, nothing to acknowledge.","silent":false,"statusEndpoint":0,"statusIdent":"-"}
+{"seq":2,"epoch":1791494250,"task":"handoff","wake":"signal: /Users/nags/.no-mistakes/worktrees/112ad61efd5a/01M4EM2VPS4MZPQXPM3054V0WT/.r/state/handoff.status","verdict":"captain","summary":"The handoff worker finished implementing and committed; no PR exists yet. It is waiting for MAIN's go to start validation.","silent":false,"statusEndpoint":120,"statusIdent":"strong:16777233:4260008357:1791494193.869586326"}
+
+
+--- prior-routine-engine.txt ---
+engine=claude
+model=sonnet
+session=dcae0975-37f6-44b1-ab6f-fa9f520d57a3
+key=79483:1422380015:1705195746
+turns=1
+conversation_cost=0.028951
+
+
+--- prior-routine-host.log ---
+1791494189	start	gen=host-85227-1791494188	primary=claude
+1791494254	handled	turn=host-85227-1791494188.1	posture=attended	rc=0	reports=1	error=0 cost=0.028951 conversation_cost=0.028951 input=10 cache_read=65194 cache_write=2703 output=508 turns=5	signal: /Users/nags/.no-mistakes/worktrees/112ad61efd5a/01M4EM2VPS4MZPQXPM3054V0WT/.r/state/handoff.status
+1791494254	to-main	branch-outcome: the supervision session handled this wake and recorded captain outcomes for you (store rows 2); run bin/fm-wake-drain.sh, act on its BRANCH OUTCOMES section, and acknowledge them as it prints

@@ -1,0 +1,9 @@
+{
+  "first_done": "pass",
+  "prior_routine": "pass",
+  "same_session_repeat": "pass",
+  "restart_repeat": "fail",
+  "observed_restart_verdict": "captain",
+  "first_captain_acknowledged_through": "1",
+  "scope": "Real authenticated headless Claude primary and real supervision host/engine, with disposable worker records. Native interactive Stop-hook delivery was not exercised; the trust dialog was left untouched."
+}

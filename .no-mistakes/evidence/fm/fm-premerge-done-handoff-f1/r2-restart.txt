@@ -1,0 +1,58 @@
+Real authenticated Claude primary restarted against the same marked disposable home. The first captain outcome was acknowledged through 1. Twenty-four unrelated routine outcomes moved that hand-off beyond the default recent window. The worker repeated the same completion, with no PR or validation started.
+
+--- state/handoff.status ---
+done [at=1791494388]: Implementation complete, committed; waiting for Firstmate to instruct /no-mistakes. No PR exists.
+done [at=1791494456]: Implementation complete, committed; waiting for Firstmate to instruct /no-mistakes. No PR exists.
+done [at=1791494668]: Implementation complete, committed; waiting for Firstmate to instruct /no-mistakes. No PR exists.
+
+
+--- state/.branch-outcomes-processed ---
+1
+
+
+--- restart-host.out ---
+watcher: started pid=12480 (beacon fresh)
+supervision-host: cycle boundary - the host ended its park at its bound; drain, acknowledge, and end the turn, and the next park starts on its own
+
+
+--- restart-main-drain.out ---
+WAKE_ACK_REQUIRED: after handling completes run bin/fm-wake-drain.sh --ack-through 0 --recovery-generation 39109.1791494814.6uzdMl
+
+
+--- restart-main-ack.out ---
+
+
+--- same-session-engine.txt ---
+engine=claude
+model=sonnet
+session=0d143146-81f2-4d43-bb5a-da2fecbe8790
+key=6837:2323373955:3292652010
+turns=2
+conversation_cost=0.045766
+
+
+--- restart-engine.txt ---
+engine=claude
+model=sonnet
+session=762acf1b-b652-4897-a20a-c4353b1321f7
+key=9405:60292103:229121868
+turns=1
+conversation_cost=0.026034
+
+
+--- restart-host.log ---
+1791494380	start	gen=host-12509-1791494380	primary=claude
+1791494440	handled	turn=host-12509-1791494380.1	posture=attended	rc=0	reports=1	error=0 cost=0.022806 conversation_cost=0.022806 input=10 cache_read=66560 cache_write=1076 output=517 turns=5	signal: /Users/nags/.no-mistakes/worktrees/112ad61efd5a/01M4EM2VPS4MZPQXPM3054V0WT/.q/state/handoff.status
+1791494440	to-main	branch-outcome: the supervision session handled this wake and recorded captain outcomes for you (store rows 1); run bin/fm-wake-drain.sh, act on its BRANCH OUTCOMES section, and acknowledge them as it prints
+1791494453	start	gen=host-61304-1791494452	primary=claude
+1791494516	handled	turn=host-61304-1791494452.1	posture=attended	rc=0	reports=1	error=0 cost=0.02296 conversation_cost=0.045766 input=8 cache_read=58222 cache_write=1390 output=574 turns=4	signal: /Users/nags/.no-mistakes/worktrees/112ad61efd5a/01M4EM2VPS4MZPQXPM3054V0WT/.q/state/handoff.status
+1791494603	boundary	after 151s
+1791494665	start	gen=host-12068-1791494664	primary=claude
+1791494719	handled	turn=host-12068-1791494664.1	posture=attended	rc=0	reports=1	error=0 cost=0.026034 conversation_cost=0.026034 input=10 cache_read=67450 cache_write=1571 output=624 turns=5	signal: /Users/nags/.no-mistakes/worktrees/112ad61efd5a/01M4EM2VPS4MZPQXPM3054V0WT/.q/state/handoff.status
+1791494814	boundary	after 150s
+
+
+--- handoff outcomes only; full serialized store saved separately ---
+{"seq": 1, "epoch": 1791494436, "task": "handoff", "wake": "signal: /Users/nags/.no-mistakes/worktrees/112ad61efd5a/01M4EM2VPS4MZPQXPM3054V0WT/.q/state/handoff.status", "verdict": "captain", "summary": "The handoff worker finished implementing and committed; no PR exists yet. It is waiting for MAIN's go to start /no-mistakes validation.", "silent": false, "statusEndpoint": 120, "statusIdent": "strong:16777233:4260147656:1791494388.658382679"}
+{"seq": 2, "epoch": 1791494510, "task": "handoff", "wake": "signal: /Users/nags/.no-mistakes/worktrees/112ad61efd5a/01M4EM2VPS4MZPQXPM3054V0WT/.q/state/handoff.status", "verdict": "routine", "summary": "The handoff worker repeated its ready line: still waiting for MAIN's go to start validation, no PR yet. Nothing has changed since the earlier report.", "silent": true, "statusEndpoint": 240, "statusIdent": "strong:16777233:4260147656:1791494388.658382679"}
+{"seq": 27, "epoch": 1791494715, "task": "handoff", "wake": "signal: /Users/nags/.no-mistakes/worktrees/112ad61efd5a/01M4EM2VPS4MZPQXPM3054V0WT/.q/state/handoff.status", "verdict": "routine", "summary": "The handoff worker repeated its ready line: still waiting for MAIN's go to start validation, no PR yet. Nothing changed since the earlier captain report.", "silent": true, "statusEndpoint": 360, "statusIdent": "strong:16777233:4260147656:1791494388.658382679"}
